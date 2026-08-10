@@ -1,130 +1,311 @@
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:1e1b4b,50:312e81,100:1e1b4b&height=200&section=header&text=FREE%20API%20KEYS%20MODELS&fontSize=44&fontColor=ffffff&animation=fadeIn&fontAlignY=38&desc=One%20Notebook%20%E2%80%A2%20Five%20Free-Tier%20LLM%20Providers%20%E2%80%A2%20LangChain%20Ready&descAlignY=58&descSize=16&descColor=c7d2fe" width="100%"/>
+# ⚡ Free API Keys Models
 
-<p>
-  <img src="https://img.shields.io/badge/Python-3.10+-3776AB?style=for-the-badge&logo=python&logoColor=white" />
-  <img src="https://img.shields.io/badge/LangChain-Ready-1C3C3C?style=for-the-badge&logo=langchain&logoColor=white" />
-  <img src="https://img.shields.io/badge/Jupyter-Notebook-F37626?style=for-the-badge&logo=jupyter&logoColor=white" />
-  <img src="https://img.shields.io/badge/Providers-5-6366F1?style=for-the-badge" />
-  <img src="https://img.shields.io/badge/Cost-%240.00-22c55e?style=for-the-badge" />
-</p>
+### 🚀 The fastest way to start building with free-tier LLM APIs using LangChain
 
-<p>
-  <img src="https://komarev.com/ghpvc/?username=SalikAhmad702-freeapikeys&label=Repo+Views&color=6366f1&style=flat-square" />
-</p>
+<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=22&pause=1000&color=00D9FF&center=true&vCenter=true&width=750&lines=Free+LLM+API+References;LangChain+%2B+Multiple+Providers;Mistral+%7C+Groq+%7C+OpenRouter+%7C+Qwen+%7C+Ollama;Copy+%E2%86%92+Paste+%E2%86%92+Run+%E2%9A%A1" alt="Typing SVG" />
+
+<br>
+
+<img src="https://img.shields.io/badge/LangChain-Framework-1C3C3C?style=for-the-badge&logo=langchain&logoColor=white" />
+<img src="https://img.shields.io/badge/Python-3.x-3776AB?style=for-the-badge&logo=python&logoColor=white" />
+<img src="https://img.shields.io/badge/LLM-APIs-8A2BE2?style=for-the-badge" />
+<img src="https://img.shields.io/badge/Free-Tiers-00C853?style=for-the-badge" />
+
+<br><br>
+
+[📓 Notebook](#-how-it-works) •
+[⚡ Providers](#-providers-covered) •
+[🚀 Quick Start](#-quick-start) •
+[🔑 API Keys](#-where-to-get-free-api-keys) •
+[🗺️ Roadmap](#️-roadmap)
 
 </div>
 
-<br/>
+---
 
-## 📌 Overview
+## 🧠 What Is This?
 
-**Free API Keys Models** is a single reference notebook (`models.ipynb`) that shows the *exact, minimal* LangChain initialization code for five LLM providers that offer genuinely usable **free API tiers**. No SDK-hunting, no half-finished quickstarts, no marketing filler — just the import, the class, and the model string for each provider, ready to copy and run.
+**Free API Keys Models** is a practical reference repository centered around one notebook:
 
-Every provider initializes the same `model` object shape, so once you pick one, everything downstream — chains, agents, RAG pipelines — stays identical.
+```text
+models.ipynb
+```
 
-<br/>
+It contains the **minimal LangChain initialization code** for five LLM providers offering usable free API tiers.
 
-## 🧭 How It Works
+No:
+
+* ❌ SDK hunting
+* ❌ complicated boilerplate
+* ❌ half-finished quickstarts
+* ❌ unnecessary abstractions
+* ❌ marketing filler
+
+Just:
+
+```text
+Provider
+   ↓
+Import
+   ↓
+Model class
+   ↓
+Model name
+   ↓
+API key
+   ↓
+model.invoke(...)
+```
+
+The goal is simple:
+
+> **Pick a provider → copy the initialization → add your API key → start building.**
+
+---
+
+## ✨ Why This Repository?
+
+When experimenting with LLM applications, changing providers shouldn't mean rewriting your entire application.
+
+This repository demonstrates how different providers can expose a consistent LangChain model interface:
+
+```text
+┌──────────────────────────────────────────┐
+│             Your AI Application          │
+├──────────────────────────────────────────┤
+│       Chains • Agents • RAG • Tools      │
+├──────────────────────────────────────────┤
+│              LangChain API               │
+├──────────────────────────────────────────┤
+│                                          │
+│  Mistral   Groq   OpenRouter   Qwen      │
+│                       │          │       │
+│                   Ollama Cloud           │
+│                                          │
+└──────────────────────────────────────────┘
+```
+
+Change the provider.
+
+**Your downstream LangChain code can remain essentially the same.**
+
+---
+
+# 🧭 How It Works
 
 ```mermaid
 flowchart LR
-    A["📓 Open models.ipynb"] --> B["🔍 Pick a provider section"]
-    B --> C["📋 Copy the init cell"]
-    C --> D["🔑 Paste your free API key in .env"]
-    D --> E["🚀 model.invoke(...)"]
+    A["📓 Open models.ipynb"] --> B["🔍 Choose Provider"]
+    B --> C["📋 Copy Initialization"]
+    C --> D["🔑 Add API Key"]
+    D --> E["⚡ Create Model"]
+    E --> F["🚀 model.invoke(...)"]
+    F --> G["🤖 Build Chains / Agents / RAG"]
+
+    style A fill:#111827,color:#fff
+    style B fill:#1e293b,color:#fff
+    style C fill:#334155,color:#fff
+    style D fill:#7c3aed,color:#fff
+    style E fill:#0369a1,color:#fff
+    style F fill:#059669,color:#fff
+    style G fill:#16a34a,color:#fff
 ```
 
-<br/>
+### The workflow
 
-## ⚡ Providers Covered
+```text
+📓 Open notebook
+      ↓
+🔍 Pick provider
+      ↓
+📋 Copy code
+      ↓
+🔐 Configure .env
+      ↓
+⚡ Invoke model
+      ↓
+🤖 Build your application
+```
 
-<table>
-<tr>
-<td width="50%" valign="top">
+---
 
-### 🌬️ Mistral AI
-`mistral-medium-latest`
-via `langchain-mistralai`
-Native key auth
-
-### ⚡ Groq
-`llama-3.3-70b-versatile`
-via `langchain-groq`
-Native key auth — blazing inference speed
-
-</td>
-<td width="50%" valign="top">
-
-### 🔀 OpenRouter
-`google/gemma-4-31b-it:free`
-via `langchain-openrouter`
-Native key auth — free-tagged models
-
-### 🌐 Qwen (Alibaba DashScope Intl)
-`qwen-turbo`
-via `langchain-openai` (OpenAI-compatible)
-
-</td>
-</tr>
-</table>
+# ⚡ Providers Covered
 
 <div align="center">
 
-### 🦙 Ollama Cloud
-`gpt-oss:20b` · via `langchain-openai` (OpenAI-compatible)
+|       Provider      |             Model            |    LangChain Package   |     Connection    |
+| :-----------------: | :--------------------------: | :--------------------: | :---------------: |
+|  🌬️ **Mistral AI** |    `mistral-medium-latest`   |  `langchain-mistralai` |       Native      |
+|      ⚡ **Groq**     |   `llama-3.3-70b-versatile`  |    `langchain-groq`    |       Native      |
+|  🔀 **OpenRouter**  | `google/gemma-4-31b-it:free` | `langchain-openrouter` |       Native      |
+|     🌐 **Qwen**     |         `qwen-turbo`         |   `langchain-openai`   | OpenAI-compatible |
+| 🦙 **Ollama Cloud** |         `gpt-oss:20b`        |   `langchain-openai`   | OpenAI-compatible |
 
 </div>
 
-<br/>
+---
 
-## 🛠️ Tech Stack
+## 🌬️ Mistral AI
 
-<p>
-  <img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white" />
-  <img src="https://img.shields.io/badge/LangChain-1C3C3C?style=flat-square&logo=langchain&logoColor=white" />
-  <img src="https://img.shields.io/badge/Mistral%20AI-FA520F?style=flat-square&logo=mistralai&logoColor=white" />
-  <img src="https://img.shields.io/badge/Groq-F55036?style=flat-square" />
-  <img src="https://img.shields.io/badge/OpenRouter-6366F1?style=flat-square" />
-  <img src="https://img.shields.io/badge/Qwen-615CED?style=flat-square" />
-  <img src="https://img.shields.io/badge/Ollama-000000?style=flat-square&logo=ollama&logoColor=white" />
-  <img src="https://img.shields.io/badge/dotenv-ECD53F?style=flat-square&logo=dotenv&logoColor=black" />
-</p>
+```text
+Model
+└── mistral-medium-latest
 
-<br/>
+Package
+└── langchain-mistralai
 
-## 🚀 Quick Start
+Authentication
+└── Native API key
+```
 
-**1. Clone the repo**
+A straightforward LangChain integration using Mistral's native package.
+
+---
+
+## ⚡ Groq
+
+```text
+Model
+└── llama-3.3-70b-versatile
+
+Package
+└── langchain-groq
+
+Authentication
+└── Native API key
+
+Highlight
+└── ⚡ Extremely fast inference
+```
+
+---
+
+## 🔀 OpenRouter
+
+```text
+Model
+└── google/gemma-4-31b-it:free
+
+Package
+└── langchain-openrouter
+
+Authentication
+└── Native API key
+
+Highlight
+└── 🔀 Access to free-tagged models
+```
+
+---
+
+## 🌐 Qwen — Alibaba DashScope Intl
+
+```text
+Model
+└── qwen-turbo
+
+Package
+└── langchain-openai
+
+Protocol
+└── OpenAI-compatible API
+
+Base URL
+└── https://dashscope-intl.aliyuncs.com/compatible-mode/v1
+```
+
+---
+
+## 🦙 Ollama Cloud
+
+```text
+Model
+└── gpt-oss:20b
+
+Package
+└── langchain-openai
+
+Protocol
+└── OpenAI-compatible API
+```
+
+---
+
+# 🛠️ Tech Stack
+
+<div align="center">
+
+<img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" />
+<img src="https://img.shields.io/badge/LangChain-1C3C3C?style=for-the-badge&logo=langchain&logoColor=white" />
+<img src="https://img.shields.io/badge/LangGraph-FF6B35?style=for-the-badge" />
+<img src="https://img.shields.io/badge/Jupyter-F37626?style=for-the-badge&logo=jupyter&logoColor=white" />
+<img src="https://img.shields.io/badge/uv-DE5FE9?style=for-the-badge" />
+<img src="https://img.shields.io/badge/.env-Configuration-000000?style=for-the-badge" />
+
+<br>
+
+<img src="https://img.shields.io/badge/Mistral-AI-FF7000?style=flat-square" />
+<img src="https://img.shields.io/badge/Groq-Inference-F55036?style=flat-square" />
+<img src="https://img.shields.io/badge/OpenRouter-LLM%20Gateway-6467F2?style=flat-square" />
+<img src="https://img.shields.io/badge/Qwen-Alibaba-6366F1?style=flat-square" />
+<img src="https://img.shields.io/badge/Ollama-Cloud-000000?style=flat-square" />
+
+</div>
+
+---
+
+# 🚀 Quick Start
+
+## 1️⃣ Clone the Repository
+
 ```bash
 git clone https://github.com/SalikAhmad702/Free-API-Keys-Models.git
+
 cd Free-API-Keys-Models
 ```
 
-**2. Create a virtual environment**
+---
+
+## 2️⃣ Create a Virtual Environment
+
+### Windows
+
 ```bash
 python -m venv venv
 
-# Windows
 venv\Scripts\activate
-# macOS/Linux
+```
+
+### macOS / Linux
+
+```bash
+python -m venv venv
+
 source venv/bin/activate
 ```
 
-**3. Install dependencies**
+---
 
-Using `pip`:
+## 3️⃣ Install Dependencies
+
+### Using `pip`
+
 ```bash
 pip install -r requirements.txt
 ```
 
-Or using `uv` (faster):
+### Using `uv` ⚡
+
 ```bash
 uv pip install -r requirements.txt
 ```
 
-Each provider cell in the notebook also has its own `uv pip install` line commented above it, if you only want to install one provider's package:
+### Install Individual Providers
+
+If you only need one provider:
+
 ```bash
 uv pip install langchain-mistralai
 uv pip install langchain-groq
@@ -132,33 +313,105 @@ uv pip install langchain-openrouter
 uv pip install langchain-openai
 ```
 
-**4. Set up your keys**
+Each provider section inside the notebook also contains its corresponding `uv pip install` command.
+
+---
+
+# 🔐 Environment Configuration
+
+Create your environment file:
+
 ```bash
 cp .env.example .env
 ```
-Open `.env` and paste in your real API keys — you only need the ones you plan to use.
 
-**5. Launch the notebook**
+Then add the API keys for the providers you want to use.
+
+```env
+MISTRAL_API_KEY=your_key_here
+GROQ_API_KEY=your_key_here
+OPENROUTER_API_KEY=your_key_here
+QWEN_API_KEY=your_key_here
+OLLAMA_API_KEY=your_key_here
+```
+
+> ⚠️ **Never commit your real `.env` file to GitHub.**
+
+Only configure the providers you actually plan to use.
+
+---
+
+# 📓 Launch the Notebook
+
 ```bash
 jupyter notebook models.ipynb
 ```
-Run the cell under whichever provider heading you want. Each block is fully self-contained.
 
-<br/>
+Then:
 
-## 🧩 The Pattern
+```text
+📓 models.ipynb
+       │
+       ├── 🌬️ Mistral
+       ├── ⚡ Groq
+       ├── 🔀 OpenRouter
+       ├── 🌐 Qwen
+       └── 🦙 Ollama Cloud
+```
 
-Every provider reduces to the same three lines:
+Choose a provider and run its self-contained code cell.
+
+---
+
+# 🧩 The Core Pattern
+
+Every provider follows the same fundamental idea.
+
+### Example — Groq
 
 ```python
 from langchain_groq import ChatGroq
 
-model = ChatGroq(model="llama-3.3-70b-versatile")
-response = model.invoke("Explain RAG in one sentence.")
+model = ChatGroq(
+    model="llama-3.3-70b-versatile"
+)
+
+response = model.invoke(
+    "Explain RAG in one sentence."
+)
+
 print(response.content)
 ```
 
-For OpenAI-compatible providers (Qwen, Ollama Cloud), the only difference is a `base_url`:
+The important part is the consistent interface:
+
+```python
+model.invoke(...)
+```
+
+That means your application can continue using the same LangChain abstractions for:
+
+```text
+                    ┌──────────────┐
+                    │    Model     │
+                    └──────┬───────┘
+                           │
+          ┌────────────────┼────────────────┐
+          ↓                ↓                ↓
+       Chains            Agents            RAG
+          │                │                │
+          └────────────────┼────────────────┘
+                           ↓
+                    AI Application
+```
+
+---
+
+# 🌐 OpenAI-Compatible Providers
+
+Qwen and Ollama Cloud use an OpenAI-compatible interface.
+
+For example:
 
 ```python
 from langchain_openai import ChatOpenAI
@@ -171,89 +424,203 @@ model = ChatOpenAI(
 )
 ```
 
-Swap the class, swap the provider — your chains, prompts, and agents never need to change.
+The provider changes.
 
-<br/>
+The rest of your LangChain architecture doesn't need to.
 
-## 🔐 Where to Get Free API Keys
+---
 
-| Provider | Console |
-|---|---|
-| 🌬️ Mistral AI | [console.mistral.ai](https://console.mistral.ai/) |
-| ⚡ Groq | [console.groq.com/keys](https://console.groq.com/keys) |
-| 🔀 OpenRouter | [openrouter.ai/keys](https://openrouter.ai/keys) |
-| 🌐 Qwen (DashScope Intl) | [dashscope-intl.console.aliyun.com](https://dashscope-intl.console.aliyun.com/) |
-| 🦙 Ollama Cloud | [ollama.com](https://ollama.com/) |
+# 🔄 Provider Swapping
 
-<br/>
+Think of the model as a replaceable component:
 
-## 📁 Repository Structure
-
+```text
+                    YOUR APPLICATION
+                           │
+                           ▼
+                  ┌─────────────────┐
+                  │    LangChain    │
+                  └────────┬────────┘
+                           │
+                    model.invoke()
+                           │
+              ┌────────────┼────────────┐
+              │            │            │
+              ▼            ▼            ▼
+           Mistral        Groq      OpenRouter
+              │            │            │
+              └────────────┼────────────┘
+                           │
+                    Same application
 ```
+
+This makes experimentation much easier when testing different providers.
+
+---
+
+# 🔑 Where to Get Free API Keys
+
+| Provider                 | Console                                                                         |
+| :----------------------- | :------------------------------------------------------------------------------ |
+| 🌬️ Mistral AI           | [console.mistral.ai](https://console.mistral.ai/)                               |
+| ⚡ Groq                   | [console.groq.com/keys](https://console.groq.com/keys)                          |
+| 🔀 OpenRouter            | [openrouter.ai/keys](https://openrouter.ai/keys)                                |
+| 🌐 Qwen — DashScope Intl | [dashscope-intl.console.aliyun.com](https://dashscope-intl.console.aliyun.com/) |
+| 🦙 Ollama Cloud          | [ollama.com](https://ollama.com/)                                               |
+
+> **Note:** Free-tier availability, quotas, model access, and rate limits can change. Check each provider's current console before relying on a model in production.
+
+---
+
+# 📁 Repository Structure
+
+```text
 Free-API-Keys-Models/
-├── models.ipynb         # One markdown header + one code cell per provider
-├── .env.example          # Key template — copy to .env and fill in
-├── requirements.txt       # Everything needed to run every cell
-└── README.md
+│
+├── 📓 models.ipynb
+│   └── Provider initialization examples
+│
+├── 🔐 .env.example
+│   └── API key template
+│
+├── 📦 requirements.txt
+│   └── Dependencies for all providers
+│
+└── 📖 README.md
+    └── Project documentation
 ```
 
-<br/>
+### Notebook philosophy
 
-## 🗺️ Roadmap
+```text
+One provider
+     ↓
+One markdown heading
+     ↓
+One self-contained code cell
+     ↓
+Copy → Paste → Run
+```
 
-- [x] Mistral, Groq, OpenRouter, Qwen, Ollama Cloud
-- [ ] Google Gemini free tier
-- [ ] Streaming response examples per provider
-- [ ] Latency + quality benchmark script across all five
+---
 
-<br/>
+# 🗺️ Roadmap
 
-## 🤝 Contributing
+### Current
 
-Found another provider with a real free tier? Add it in the same format — one markdown header, one self-contained code cell — and open a PR.
+* [x] 🌬️ Mistral AI
+* [x] ⚡ Groq
+* [x] 🔀 OpenRouter
+* [x] 🌐 Qwen
+* [x] 🦙 Ollama Cloud
+
+### Planned
+
+* [ ] 🔵 Google Gemini free tier
+* [ ] 🌊 Streaming response examples
+* [ ] ⚡ Latency benchmark
+* [ ] 🧠 Quality benchmark
+* [ ] 📊 Compare all five providers automatically
+
+### Future Vision
+
+```text
+Free API Reference
+       │
+       ├── Providers
+       ├── Models
+       ├── Streaming
+       ├── Structured Output
+       ├── Tool Calling
+       ├── RAG
+       ├── Agents
+       └── Benchmarks
+```
+
+---
+
+# 🤝 Contributing
+
+Found another provider with a **real free tier**?
+
+Add it using the same philosophy:
+
+```text
+1 Provider
+1 Markdown section
+1 Self-contained code cell
+1 Clear model name
+```
+
+### Create a branch
 
 ```bash
 git checkout -b add/provider-name
+```
+
+### Commit your changes
+
+```bash
 git commit -m "feat: add <provider> setup"
+```
+
+### Push
+
+```bash
 git push origin add/provider-name
 ```
 
-<br/>
+Then open a Pull Request.
+
+---
+
+# ⭐ Support the Project
+
+If this repository saved you time searching through provider documentation:
+
+<div align="center">
+
+### ⭐ Star the repository
+
+### 🔁 Share it with another AI/ML developer
+
+### 🛠️ Contribute another free-tier provider
+
+</div>
+
+---
+
+# 👤 Author
+
+<div align="center">
+
+## **Salik Ahmad**
+
+### AI/ML Engineer
+
+<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=18&pause=1000&center=true&vCenter=true&width=700&lines=Building+Agentic+AI+Systems;Building+RAG+Pipelines;Building+LLM-Powered+Tools;Learning+%E2%80%A2+Building+%E2%80%A2+Sharing" alt="Typing SVG" />
+
+<br>
+
+**Building agentic AI systems, RAG pipelines, and LLM-powered tools — one free API key at a time.**
+
+</div>
 
 ---
 
 <div align="center">
 
-## 👤 Author
+### 🚀 Build more. Pay less. Experiment faster.
 
-### **Salik Ahmad**
-**AI/ML Engineer**
+<br>
 
-*Building agentic AI systems, RAG pipelines, and LLM-powered tools — one free API key at a time.*
+<img src="https://img.shields.io/badge/AI%2FML-Engineer-8A2BE2?style=for-the-badge" />
+<img src="https://img.shields.io/badge/Agentic-AI-00D9FF?style=for-the-badge" />
+<img src="https://img.shields.io/badge/RAG-Systems-00C853?style=for-the-badge" />
+<img src="https://img.shields.io/badge/LLM-Applications-FF6B35?style=for-the-badge" />
 
-<p>
-  <a href="https://salikahmad.vercel.app/" target="_blank">
-    <img src="https://img.shields.io/badge/Portfolio-salikahmad.vercel.app-6366F1?style=for-the-badge&logo=vercel&logoColor=white&labelColor=0d0d0d" />
-  </a>
-  <a href="https://www.linkedin.com/in/salik-ahmad-programmer/" target="_blank">
-    <img src="https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white&labelColor=0d0d0d" />
-  </a>
-  <a href="https://github.com/SalikAhmad702" target="_blank">
-    <img src="https://img.shields.io/badge/GitHub-Follow-181717?style=for-the-badge&logo=github&logoColor=white&labelColor=0d0d0d" />
-  </a>
-  <a href="https://www.kaggle.com/salikahmad702" target="_blank">
-    <img src="https://img.shields.io/badge/Kaggle-Explore-20BEFF?style=for-the-badge&logo=kaggle&logoColor=white&labelColor=0d0d0d" />
-  </a>
-</p>
+<br><br>
 
-<br/>
-
-<sub>⭐ If this saved you an hour of digging through provider docs, consider starring the repo.</sub>
-
-<br/><br/>
-
----
-
-<sub>© 2026 Salik Ahmad · AI/ML Engineer</sub>
+**© 2026 Salik Ahmad · AI/ML Engineer**
 
 </div>
