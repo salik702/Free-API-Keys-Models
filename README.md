@@ -50,7 +50,7 @@ via `langchain-mistralai`
 Native key auth
 
 ### ⚡ Groq
-`llama-3.3-70b-versatile`
+`openai/gpt-oss-120b`
 via `langchain-groq`
 Native key auth — blazing inference speed
 
@@ -153,7 +153,7 @@ Every provider reduces to the same three lines:
 ```python
 from langchain_groq import ChatGroq
 
-model = ChatGroq(model="llama-3.3-70b-versatile")
+model = ChatGroq(model="openai/gpt-oss-120b")
 response = model.invoke("Explain RAG in one sentence.")
 print(response.content)
 ```
