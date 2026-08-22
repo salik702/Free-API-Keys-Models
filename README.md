@@ -424,6 +424,17 @@ model = ChatOpenAI(
 )
 ```
 
+```python
+from langchain_openai import ChatOpenAI
+import os
+
+model = ChatOpenAI(
+    model="minimax-m3:cloud",
+    api_key=os.getenv("OLLAMA_API_KEY"),
+    base_url="https://ollama.com/v1",
+)
+```
+
 The provider changes.
 
 The rest of your LangChain architecture doesn't need to.
